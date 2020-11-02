@@ -68,25 +68,22 @@ function setTime() {
 // From questions.html
 var h1QuestionEl = document.querySelector("#question");
 var choicesEl = document.querySelector(".choices");
-// let result = document.querySelector(".result");
-let h3element = document.querySelector(".result");
+
+// Feedback for each question
+let h3El = document.querySelector(".result");
 
 // Create buttons for answers in each question
 var choiceA = document.createElement("button");
 choiceA.setAttribute("class", "btn");
 choiceA.setAttribute("id", "btnA");
-// choiceA.setAttribute("value", choiceA);
 
 var choiceB = document.createElement("button");
 choiceB.setAttribute("class", "btn");
 choiceB.setAttribute("id", "btnB");
-// choiceB.setAttribute("value", choiceB);
 
 var choiceC = document.createElement("button");
 choiceC.setAttribute("class", "btn");
 choiceC.setAttribute("id", "btnC");
-// choiceB.setAttribute("value", choiceC);
-
 
 // When click start button, setTime() runs to countdown time and questions are presented
 countdownButton.addEventListener("click", function () {
@@ -96,30 +93,38 @@ countdownButton.addEventListener("click", function () {
     loadQuestion(0);
 
     var currentIndex = 0;
-    
+
     $(".btn").on("click", function (event) {
+
         let userChoice = event.target.innerHTML;
         console.log(userChoice);
         console.log(questions[currentIndex].answer);
-    
+
         if (userChoice === questions[currentIndex].answer) {
             score++;
-            h3element.textContent = "Yeah baby";
-        } else {
+            h3El.textContent = "Yeah baby!";
+
+        } else if (userChoice !== questions[currentIndex].answer) {
             console.log("Wrong Baka!!!");
-            h3element.textContent = "Wrong Bbay";
+            h3El.textContent = "Wrong baby!";
         }
-        
+
         if (currentIndex === questions.length - 1) {
             console.log("Questions are finished Baka!!!");
-            console.log("Your score is: " + score  + " out of " + questions.length);
+            console.log("Your score is: " + score + " out of " + questions.length);
 
 
-        } else {
-            currentIndex++; 
-            loadQuestion(currentIndex);
         }
+        setTimeout(function () {
+            h3El.textContent = "";
+            currentIndex++;
+            loadQuestion(currentIndex);
+        }, 1000);
+
+
     });
+
+
 
     // function sleepFor(sleepDuration) {
     //     var now = new Date().getTime();
@@ -142,48 +147,48 @@ countdownButton.addEventListener("click", function () {
         choiceB.textContent = questions[questionId].choices[1];
         choiceC.textContent = questions[questionId].choices[2];
 
-        // h3element.textContent = "";
+        // h3El.textContent = "";
     }
-        // When user clicked to make choices
+    // When user clicked to make choices
 
-        // Get user choice
+    // Get user choice
 
 
-        /* for (var i = 0; i < questions.length; i++) {
-            console.log("QUESTIONS.LENGTH: ", questions.length);
+    /* for (var i = 0; i < questions.length; i++) {
+        console.log("QUESTIONS.LENGTH: ", questions.length);
 
-            // let userChoice = choicesEl.onclick;
-            // let userChoice = this.innerHTML;
+        // let userChoice = choicesEl.onclick;
+        // let userChoice = this.innerHTML;
 
-            // If correct answer is selected
-            // Plus one score for one correct answer
-            if (userChoice === questions[i].answer) {
-                score++;
-                i++;
-                console.log(userChoice)
-                // Present question
-                h1QuestionEl.textContent = questions[i].question;
-                // Present choices
-                choiceA.textContent = questions[i].choices[0];
-                choiceB.textContent = questions[i].choices[1];
-                choiceC.textContent = questions[i].choices[2];
-            }
-            // If incorrect answer is selected (else)
-            // Subtract 5 sec in the countdown timer for each incorrect answer
-            else if (userChoice !== questions[i].answer) {
-
-                i++;
-                console.log(userChoice)
-                // Present question
-                h1QuestionEl.textContent = questions[i].question;
-                // Present choices
-                choiceA.textContent = questions[i].choices[0];
-                choiceB.textContent = questions[i].choices[1];
-                choiceC.textContent = questions[i].choices[2];
-            }
+        // If correct answer is selected
+        // Plus one score for one correct answer
+        if (userChoice === questions[i].answer) {
+            score++;
+            i++;
+            console.log(userChoice)
+            // Present question
+            h1QuestionEl.textContent = questions[i].question;
+            // Present choices
+            choiceA.textContent = questions[i].choices[0];
+            choiceB.textContent = questions[i].choices[1];
+            choiceC.textContent = questions[i].choices[2];
         }
-        */
-}); 
+        // If incorrect answer is selected (else)
+        // Subtract 5 sec in the countdown timer for each incorrect answer
+        else if (userChoice !== questions[i].answer) {
+
+            i++;
+            console.log(userChoice)
+            // Present question
+            h1QuestionEl.textContent = questions[i].question;
+            // Present choices
+            choiceA.textContent = questions[i].choices[0];
+            choiceB.textContent = questions[i].choices[1];
+            choiceC.textContent = questions[i].choices[2];
+        }
+    }
+    */
+});
 
 
 // When game ended
@@ -203,7 +208,20 @@ countdownButton.addEventListener("click", function () {
 
 /*
 
+//printHighScores button -->
 
+// loop through your data in localStorage and print it as list
+
+
+
+
+
+
+// When use answered all of the questions -->
+// create text Field ask user's name and when user answers it you store
+// users name and score into the localStorage
+
+// Score --> create new text field for username
 
 
 */
