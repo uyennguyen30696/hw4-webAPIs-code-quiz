@@ -2,7 +2,7 @@ var questions = [
     {
         question: "What is the first element on the periodic table?",
         choices: ["A. Hydrogen", "B. Helium", "C. Carbon"],
-        answer: "C. Carbon"
+        answer: "A. Hydrogen"
     },
     {
         question: "Acid has pH above 7",
