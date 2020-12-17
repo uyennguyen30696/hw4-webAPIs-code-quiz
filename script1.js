@@ -177,6 +177,10 @@ $("#save-btn").on("click", function (event) {
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
     // format new score object for current user
+    if (inputName.value === "") {
+        inputName.value = "Anonymous"
+    };
+    
     var newScore = {
         player: inputName.value,
         score: score

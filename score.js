@@ -1,5 +1,4 @@
 var olEl = document.querySelector("#highscores");
-var liEl = document.createElement("li");
 
 function printHighscores() {
     // get saved scores from localstorage, or if not any, set to empty array
@@ -11,6 +10,7 @@ function printHighscores() {
     });
 
     highscores.forEach(score => {
+        var liEl = document.createElement("li");
         liEl.textContent = score.player + ": " + score.score;
         olEl.appendChild(liEl);
     });
@@ -22,5 +22,5 @@ $("#clear-highscores").on("click", function (event) {
     event.preventDefault();
 
     localStorage.clear();
-    olEl.removeChild(liEl);
+    window.location.reload();
 });
