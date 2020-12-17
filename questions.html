@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed quiz game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Timed quiz game - Questions</title>
 </head>
+
 <body>
     <!-- Countdown timer -->
-    <div>Time left:
+    <div class="time-left">Time left:
         <span class="timeCountdown">
-        <div id="minutes">01:</div>
-        <div id="seconds">00</div>
+            <div id="minutes">01:</div>
+            <div id="seconds">00</div>
+            <div class="hide" id="time-up">Time's up!</div>
         </span>
 
         <div class="countdown-button">
@@ -18,26 +22,55 @@
         </div>
     </div>
 
-    <div class="question-wrapper">
-        <h1 id="question"></h1>
-        <div class="choices"></div>
+    <!-- Score -->
+    <div class="score-box">
+        <div id="score-display">Score: </div>
+        <div id="score">0</div>
     </div>
 
-    <h3 class="result">
-        
+    <!-- Questions -->
+    <section class="question-wrapper">
+        <h1 id="question"></h1>
+        <div class="choices"></div>
+    </section>
+
+    <h3 class="feedback">
     </h3>
-        
+
+    <section class="game-over-section">
+        <h2 id="game-over"></h2>
+        <div id="end-game-score"></div>
+        <button class="hide" id="save-score-btn" type="submit">Save score</button>
+        <button class="restart-button-box hide">
+            <a class="restart-btn" href="questions.html" role="button">Play again</a>
+        </button>
+    </section>
+
+    <form class="user-name-form hide">
+        <h4>Please enter your name</h4>
+        <input id="input-name" type="text" name="name" placeholder="Your name..." required>
+        <br>
+        <button id="save-btn">Save</button>
+    </form>
+
 
     <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- Javascript link from bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <script src="./script1.js"></script>
     <script src="./questions.js"></script>
 </body>
-</html>
 
+</html>

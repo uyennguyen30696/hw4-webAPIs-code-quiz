@@ -5,30 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Timed quiz game</title>
+    <title>Timed quiz game - Highscores</title>
 </head>
 
 <body>
+    <section class="high-score-box">
+        <h3>Highscores</h3>
+        <div class="high-score-display">
+            <ol id="highscores"></ol>
 
-    <div class="wrapper">
-        <h1 class="title">MAD SCIENTIST RIDDLE MAZE</h1>
-
-        <div class="intro">
-            <p>You're in wonderland but somehow got lost and discovered a secret gate that led to a strange place. Out
-                of curiosity, you walked through the gate and now are trapped in a parallel world, where a mad scientist
-                is conducting an evil experiment.
-                He gives you two options, either accept a timed quiz challenge and will be set free if you pass, or
-                being trapped there forever as a target for further experiments. Will you be able to conquer the
-                challange and escape from this wicked scientist?
-                What are you waiting for? Accept the challenge and save your life!
-            </p>
-
-            <div class="start-button-box">
-                <a class="btn btn-primary start-button" href="questions.html">Let'go</a>
-            </div>
-
+            <a href="intro.html"><button>Go Back</button></a>
+            <button id="clear-highscores">Clear Highscores</button>
         </div>
-    </div>
+    </section>
 
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -45,7 +34,9 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script src="./script1.js"></script>
+    <!-- <script src="./script1.js"></script>  -->
+    <script src="./questions.js"></script>
+    <script src="./score.js"></script>
 </body>
 
 </html>
