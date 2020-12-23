@@ -18,7 +18,7 @@ var secondsElapse = 0;
 var score = 0;
 
 // Questions
-var h1QuestionEl = document.querySelector("#question");
+var h2QuestionEl = document.querySelector("#question");
 var choicesEl = document.querySelector(".choices");
 
 // Create buttons for answers in each question
@@ -50,7 +50,7 @@ function getFormattedMinutes() {
     var minutesLeft = Math.floor(secondsLeft / 60);
 
     if (minutesLeft < 10) {
-        var formattedMinutes = "0" + minutesLeft;
+        var formattedMinutes = "0" + minutesLeft + ":";
     }
     else {
         formattedMinutes = minutesLeft;
@@ -95,6 +95,8 @@ function setTime() {
 // When click start button, setTime() runs to countdown time and questions are presented
 countdownButton.addEventListener("click", function () {
 
+    $(".countdown-button").addClass("hide");
+
     setTime();
 
     // Load next question after user has chosen an answer
@@ -110,15 +112,15 @@ countdownButton.addEventListener("click", function () {
             score++;
             $("#score").text(score);
             console.log("Score: " + score);
-            $(".feedback").text("Yeah baby!");
+            $("#feedback").text("Yeah baby!");
 
         } else if (userChoice !== questions[currentIndex].answer) {
             secondsElapse += 5;
-            $(".feedback").text("Wrong baka!");
+            $("#feedback").text("Wrong baka!");
         }
 
         setTimeout(function () {
-            $(".feedback").text("");
+            $("#feedback").text("");
             currentIndex++;
             loadQuestion(currentIndex);
         }, 1000);
@@ -132,7 +134,7 @@ function loadQuestion(currentIndex) {
 
     if (currentIndex < questions.length) {
         // Present question 
-        h1QuestionEl.textContent = questions[currentIndex].question;
+        h2QuestionEl.textContent = questions[currentIndex].question;
     }
     else {
         endGame();
@@ -151,6 +153,7 @@ function loadQuestion(currentIndex) {
 
 // When game ended
 function endGame() {
+    $(".image-wrapper").addClass("hide");
     $(".time-left").addClass("hide");
     $(".score-box").addClass("hide");
     $(".question-wrapper").addClass("hide");

@@ -4,43 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Lalezar&display=swap" rel="stylesheet">
     <title>Timed quiz game - Questions</title>
 </head>
 
 <body>
     <!-- Countdown timer -->
-    <div class="time-left">Time left:
+    <div class="time-left"><strong>Time left:</strong>
         <span class="timeCountdown">
-            <div id="minutes">01:</div>
-            <div id="seconds">00</div>
-            <div class="hide" id="time-up">Time's up!</div>
+                <div id="minutes">01:</div>
+                <div id="seconds">00</div>
+                <div class="hide" id="time-up">Time's up!</div>
         </span>
-
-        <div class="countdown-button">
-            <a class="btn btn-primary" role="button">Start</a>
-        </div>
     </div>
 
     <!-- Score -->
     <div class="score-box">
-        <div id="score-display">Score: </div>
+        <div id="score-display"><strong>Score: </strong></div>
         <div id="score">0</div>
+    </div>
+
+    <div class="countdown-button">
+        <a role="button"><strong>Press to start</strong></a>
     </div>
 
     <!-- Questions -->
     <section class="question-wrapper">
-        <h1 id="question"></h1>
+        <h2 id="question"></h2>
         <div class="choices"></div>
+        <br>
+        <h3 id="feedback"></h3>
     </section>
 
-    <h3 class="feedback">
-    </h3>
+    <div class="image-wrapper">
+        <img src="./images/mad-scientist-by-clipart-library.png" alt="Mad scientist">
+    </div>
 
     <section class="game-over-section">
         <h2 id="game-over"></h2>
         <div id="end-game-score"></div>
         <button class="hide" id="save-score-btn" type="submit">Save score</button>
+        <br>
         <button class="restart-button-box hide">
             <a class="restart-btn" href="questions.html" role="button">Play again</a>
         </button>
@@ -69,8 +75,8 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script src="./script1.js"></script>
-    <script src="./questions.js"></script>
+    <script src="./assets/script1.js"></script>
+    <script src="./assets/questions.js"></script>
 </body>
 
 </html>

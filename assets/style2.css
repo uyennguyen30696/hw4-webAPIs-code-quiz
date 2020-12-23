@@ -1,0 +1,86 @@
+.hide {
+    display: none;
+}
+
+
+.time-left {
+    position: relative;
+    top: 30px;
+    left: 50px;
+    font-size: 1.3em;
+    font-family: 'Lalezar', cursive;  
+}
+#minutes {
+    position: absolute;
+}
+#seconds {
+    position: relative;
+    left: 35px;
+} 
+.score-box {
+    position: relative;
+    top: 40px;
+    left: 50px;
+    font-size: 1.3em;
+    font-family: 'Lalezar', cursive;  
+}
+.countdown-button {
+    text-align: center;
+    margin-top: 80px;
+    border: solid;
+    border-color: transparent; 
+    padding: 20px;
+    font-size: 2em;
+    font-family: 'Hanalei Fill', cursive;
+}
+.question-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    font-family: 'Lalezar', cursive;  
+}
+.choiceBtn {
+    margin: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: 5px 5px 10px black;
+    background-color: #CEF2EE; 
+    font-size: 1.2em;
+}
+.image-wrapper {
+    position: relative;
+    float: right;
+}
+.game-over-section {
+    margin-top: 10%;
+    text-align: center;
+    font-family: 'Lalezar', cursive;  
+    font-size: 2em;
+}
+#save-score-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #CEF2EE; 
+    border-color: transparent;
+}
+.restart-button-box {
+    padding: 5px;
+    background-color: #CEF2EE; 
+    border-color: transparent;
+}
+.user-name-form {
+    text-align: center;
+    margin-top: 10%;
+    text-align: center;
+    font-family: 'Lalezar', cursive;  
+    font-size: 1.8em;
+}
+#save-btn {
+    margin-top: 5px;
+    background-color: #CEF2EE; 
+}

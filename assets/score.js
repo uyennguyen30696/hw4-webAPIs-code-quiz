@@ -11,7 +11,7 @@ function printHighscores() {
 
     highscores.forEach(score => {
         var liEl = document.createElement("li");
-        liEl.textContent = score.player + ": " + score.score;
+        liEl.textContent = score.player + ": " + score.score + " Point(s)";
         olEl.appendChild(liEl);
     });
 };

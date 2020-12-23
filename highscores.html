@@ -4,20 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Lalezar&display=swap" rel="stylesheet">
     <title>Timed quiz game - Highscores</title>
 </head>
 
 <body>
     <section class="high-score-box">
-        <h3>Highscores</h3>
+        <h1>Highscores</h1>
         <div class="high-score-display">
-            <ol id="highscores"></ol>
+            <div class="list-scores">
+                <ol id="highscores"></ol>
+            </div>
 
-            <a href="intro.html"><button>Go Back</button></a>
             <button id="clear-highscores">Clear Highscores</button>
+            <a href="intro.html"><button id="go-back-btn">Go Back</button></a>
         </div>
     </section>
+
+    <div class="image-wrapper">
+        <img src="images/mad-scientist-1-by-clipart-library.jpg" alt="Mad Scientist">
+    </div>
 
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -35,8 +43,8 @@
         crossorigin="anonymous"></script>
 
     <!-- <script src="./script1.js"></script>   -->
-    <script src="./questions.js"></script>
-    <script src="./score.js"></script>
+    <script src="./assets/questions.js"></script>
+    <script src="./assets/score.js"></script>
 </body>
 
 </html>
