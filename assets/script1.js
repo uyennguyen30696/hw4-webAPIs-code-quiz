@@ -166,9 +166,11 @@ function endGame() {
     $(".restart-button-box").removeClass("hide");
 
     if (score === questions.length) {
+        $("#win-or-lose").text("Congratulation! You have escaped the evil experiment of the mad scientist!")
         $("#image-victory-wrapper").removeClass("hide");
     }
     else if (score < questions.length) {
+        $("#win-or-lose").text("Oh no! You have failed the mission!")
         $("#image-prisoner-wrapper").removeClass("hide");
     }
 };
