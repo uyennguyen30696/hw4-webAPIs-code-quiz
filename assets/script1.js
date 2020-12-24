@@ -72,7 +72,7 @@ function getFormattedSeconds() {
 
 };
 
-// Set time to work when "Let's go" button is clicked
+// Set time to work when "Press to start" button is clicked
 function setTime() {
     var timerInterval = setInterval(function () {
         secondsElapse++;
@@ -80,10 +80,12 @@ function setTime() {
         secondsDisplay.textContent = getFormattedSeconds();
 
         if (totalSeconds - secondsElapse <= 0) {
-            clearInterval(timerInterval);
             timeUpDisplay.removeAttribute("class", "hide");
-            endGame();
-            console.log("Time's Up!");
+            
+            setTimeout(function () {
+                clearInterval(timerInterval);
+                endGame();
+            }, 1000);
         }
     }, 1000);
 };
@@ -110,12 +112,13 @@ countdownButton.addEventListener("click", function () {
 
         if (userChoice === questions[currentIndex].answer) {
             score++;
-            $("#score").text(score);
+            $("#score").text(score + " / " + questions.length);
             console.log("Score: " + score);
             $("#feedback").text("Yeah baby!");
 
         } else if (userChoice !== questions[currentIndex].answer) {
             secondsElapse += 5;
+            $("#score").text(score + " / " + questions.length);
             $("#feedback").text("Wrong baka!");
         }
 
