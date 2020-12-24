@@ -30,3 +30,7 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 ```
+
+## Credits
+
+Pictures are free to use thanks to [Clipart Library](http://clipart-library.com/).

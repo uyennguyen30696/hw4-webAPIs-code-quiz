@@ -164,6 +164,13 @@ function endGame() {
     $("#end-game-score").text("Your score is: " + score + " out of " + questions.length);
     $("#save-score-btn").removeClass("hide");
     $(".restart-button-box").removeClass("hide");
+
+    if (score === questions.length) {
+        $("#image-victory-wrapper").removeClass("hide");
+    }
+    else if (score < questions.length) {
+        $("#image-prisoner-wrapper").removeClass("hide");
+    }
 };
 
 // Save score and user's name to local storage
