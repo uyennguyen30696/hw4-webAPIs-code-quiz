@@ -3,6 +3,13 @@
 }
 
 
+body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 .time-left {
     position: relative;
     top: 30px;

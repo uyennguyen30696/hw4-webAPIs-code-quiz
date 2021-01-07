@@ -7,6 +7,10 @@ Check out the deploye link [here](https://uyennguyen30696.github.io/hw4-webAPIs-
 <br>
 This is a timed quiz with multiple-choice questions, built with dynamically updated HTML and CSS powered by JavaScript.
 
+![screenshot](./images/screenshot1.png)
+
+![screenshot](./images/screenshot2.png)
+
 ## User Story
 
 ```
