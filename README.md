@@ -1,9 +1,9 @@
-# Web APIs: Code Quiz
+# 04 Web APIs: Code Quiz
 
 
 ## Description
 
-Check out the deploye link [here](https://uyennguyen30696.github.io/hw4-webAPIs-code-quiz/intro.html).
+Check out the deploye link [here](https://uyennguyen30696.github.io/timed-trivia-game/intro.html).
 <br>
 This is a timed quiz with multiple-choice questions, built with dynamically updated HTML and CSS powered by JavaScript.
 
